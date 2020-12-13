@@ -11,7 +11,7 @@ def choice_dating_user(dict_user):
     status = 1
     while status < 7:
         search_id_dict = vk.users.search(sex=dict_user['sex'],city=dict_user['city_id'],
-        age_from = dict_user['age_from'],age_to = dict_user['age_to'] ,status = status,count = 150)
+        age_from = dict_user['age_from'],age_to = dict_user['age_to'] ,status = status,count = 900)
         for user in search_id_dict['items']:
             if not user['is_closed']:
                 user_list.append(user['id'])
